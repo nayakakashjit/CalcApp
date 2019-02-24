@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="Value1">Value 1:</label>
+                        <input type="number" [(ngModel)]="num1" class="form-control value1" placeholder="Enter Value1">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="Value2">Value 2:</label>
+                        <input type="number" [(ngModel)]="num2" class="form-control value2" placeholder="Enter Value2">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wrap">
+                <label>
+          <input type="radio" class="add" name="radio" (click)="add()"> 
+           <div  class="btn btn-sık"><span>+</span></div>
+        </label>
+                <label>
+          <input  type="radio" class="sub"  name="radio" (click)="sub()"> 
+         <div class="btn btn-sık"><span>-</span></div>
+        </label>
+                <label>
+          <input  type="radio" class="mul"  name="radio" (click)="mul()"> 
+         <div class="btn btn-sık"><span>x</span></div>
+        </label>
+                <label>
+          <input  type="radio" class="div"  name="radio" (click)="div()"> 
+         <div class="btn btn-sık"><span>÷</span></div>
+        </label>
+                <!-- <button type="submit" onclick="result()" class="btn btn-sık">=</button> -->
+            </div>
+            <div>
+                <h3 class="text-center">{{result}}</h3>
+            </div>
+
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
